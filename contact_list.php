@@ -154,7 +154,7 @@ $arr_cate = explode('|', $board['bo_category_list']);
     /* 버튼 */
     .btn{
         display:inline-flex; align-items:center; justify-content:center;
-        height:34px; padding:0 14px; border-radius:6px;
+        height:30px; padding:0 14px; border-radius:6px;
         text-decoration:none; cursor:pointer; user-select:none;
     }
     .btn-primary{ background:#2563eb; color:#fff; border:1px solid #1d4ed8; }
