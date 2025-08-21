@@ -191,7 +191,7 @@ $arr_cate = explode('|', $board['bo_category_list']);
                 </select>
                 <input type="text" name="stx" id="search_text" class="inp" placeholder="검색어 입력" value="<?= $stx ?>">
                 <button type="submit" class="btn btn-primary">검색</button>
-                <a href="./contact_list.php" class="btn btn-line">초기화</a>
+                <a href="./contact_list.php" class="btn btn_02">초기화</a>
             </div>
         </form>
 
