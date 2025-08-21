@@ -109,7 +109,7 @@ $arr_cate = explode('|', $board['bo_category_list']);
     }
     .admin-tabs .tab:hover{ background:#f3f4f6; }
     .admin-tabs .tab.is-active{
-        background:#2563eb; color:#fff; border-color:#1d4ed8;
+        background:#3f51b5; color:#fff; border-color:#1d4ed8;
     }
 
     /* 검색 폼 (카테고리 줄 + 검색 줄을 세로 배치) */
@@ -157,7 +157,7 @@ $arr_cate = explode('|', $board['bo_category_list']);
         height:30px; padding:0 12px; border-radius:6px;
         text-decoration:none; cursor:pointer; user-select:none;
     }
-    .btn-primary{ background:#2563eb; color:#fff; border:1px solid #1d4ed8; }
+    .btn-primary{ background:#3f51b5; color:#fff; border:1px solid #1d4ed8; }
     .btn-primary:hover{ background:#1d4ed8; }
     .btn-line{ background:#fff; color:#374151; border:1px solid #d1d5db; }
     .btn-line:hover{ background:#f3f4f6; }
