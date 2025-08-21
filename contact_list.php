@@ -101,7 +101,7 @@ $arr_cate = explode('|', $board['bo_category_list']);
     }
     .admin-tabs .tab{
         display:inline-block;
-        padding:7px 14px;
+        padding:5px 10px;
         border:1px solid #d1d5db;
         border-radius:6px;
         background:#fff;
