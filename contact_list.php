@@ -135,7 +135,7 @@ $arr_cate = explode('|', $board['bo_category_list']);
     /* 셀렉트/인풋 공통 */
     .admin-search .sel,
     .admin-search .inp{
-        height:34px;
+        height:30px;
         border:1px solid #d1d5db;
         border-radius:6px;
         padding:0 10px;
