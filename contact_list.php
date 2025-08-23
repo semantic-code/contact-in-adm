@@ -27,7 +27,7 @@ if($_GET['sfl']){
     $sfl = htmlspecialchars(addslashes(urldecode(trim($_GET['sfl']))), ENT_QUOTES);
     $stx = htmlspecialchars(addslashes(urldecode(trim($_GET['stx']))), ENT_QUOTES);
 
-    if (!in_array($sfl, array('wr_name', 'wr_dept', 'wr_phone'))) {
+    if (!in_array($sfl, array('wr_name', 'wr_sort', 'wr_phone'))) {
         alert('잘못된 경로로 접속하셨습니다.\n정상적인 방법으로 접속하여 주시기 바랍니다.');
         exit;
     }
@@ -35,8 +35,8 @@ if($_GET['sfl']){
     if($sfl === 'wr_name'){
         $search_sql.= "AND INSTR(wr_name, '{$stx}')  > 0 ";
     }
-    if($sfl === 'wr_dept'){
-        $search_sql.= "AND INSTR(wr_dept, '{$stx}')  > 0 ";
+    if($sfl === 'wr_sort'){
+        $search_sql.= "AND INSTR(wr_sort, '{$stx}')  > 0 ";
     }
     if($sfl === 'wr_phone'){
         $search_sql.= "AND INSTR(wr_phone, '{$stx}')  > 0 ";
