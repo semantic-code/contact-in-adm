@@ -216,7 +216,7 @@ $arr_cate = explode('|', $board['bo_category_list']);
                     <tr>
                         <td><?= $row['num'] ?></td>
                         <td><?= $row['wr_name'] ?></td>
-                        <td><?= $row['wr_dept'] ?></td>
+                        <td><?= $row['wr_sort'] ?></td>
                         <td><?= $row['wr_phone'] ?></td>
                         <td><?= htmlspecialchars($row['wr_content'] ?? '', ENT_QUOTES) ?></td>
                         <td><?= date('Y-m-d H:i:s', strtotime($row['wr_datetime'])) ?></td>
