@@ -168,6 +168,7 @@ $arr_cate = explode('|', $board['bo_category_list']);
 </style>
 
 <section>
+    <?php if($board['bo_use_category']): ?>
     <div class="admin-toolbar">
         <!-- 카테고리 탭 -->
         <ul class="admin-tabs" role="tablist">
@@ -176,25 +177,26 @@ $arr_cate = explode('|', $board['bo_category_list']);
             <?php $is_active = $sca === $cate ? 'is-active' : '' ; ?>
             <li><a href="?sca=<?= $cate?>&sfl=<?= $sfl ?>&stx=<?= $stx ?>" class="tab <?= $is_active ?>"><?= $cate?></a></li>
             <?php endforeach; ?>
-        </ul>
+        </ul>    
     </div>
-        <!-- 검색 폼 -->
-        <form class="admin-search" method="get" action="./contact_list.php" style="display: block;">
-            <input type="hidden" name="sca" value="<?= $sca ?>">
-            <!-- 검색 줄 -->
-            <div class="admin-search__row">
-                <label for="search_field" class="sr-only">검색조건</label>
-                <select name="sfl" id="search_field" class="sel">
-                    <option value="wr_name" <?= get_selected('wr_name', $sfl) ?>>이름</option>
-                    <option value="wr_dept" <?= get_selected('wr_dept', $sfl) ?>>문의유형</option>
-                    <option value="wr_phone" <?= get_selected('wr_phone', $sfl) ?>>전화번호</option>
-                </select>
-                <input type="text" name="stx" id="search_text" class="inp" placeholder="검색어 입력" value="<?= $stx ?>">
-                <button type="submit" class="btn btn-primary">검색</button>
-                <a href="./contact_list.php" class="btn btn_02">초기화</a>
-            </div>
-        </form>
-
+    <?php endif; ?>
+    
+    <!-- 검색 폼 -->
+    <form class="admin-search" method="get" action="./contact_list.php" style="display: block;">
+        <input type="hidden" name="sca" value="<?= $sca ?>">
+        <!-- 검색 줄 -->
+        <div class="admin-search__row">
+            <label for="search_field" class="sr-only">검색조건</label>
+            <select name="sfl" id="search_field" class="sel">
+                <option value="wr_name" <?= get_selected('wr_name', $sfl) ?>>이름</option>
+                <option value="wr_dept" <?= get_selected('wr_dept', $sfl) ?>>문의유형</option>
+                <option value="wr_phone" <?= get_selected('wr_phone', $sfl) ?>>전화번호</option>
+            </select>
+            <input type="text" name="stx" id="search_text" class="inp" placeholder="검색어 입력" value="<?= $stx ?>">
+            <button type="submit" class="btn btn-primary">검색</button>
+            <a href="./contact_list.php" class="btn btn_02">초기화</a>
+        </div>
+    </form>
 
     <div class="tbl_head01">
         <form id="contact-form" onsubmit="return false">
